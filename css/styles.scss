@@ -1,5 +1,166 @@
+$giphyPurple: #9933ff;
+$giphyGreen: #00ff99;
+$giphyBlue: #00ccff;
+$giphyYellow: #fff35c;
+$giphyOrange: #ff6666;
+$font: "Righteous", sans-serif;
+$fontSecondary: "Source sans pro", sans-serif;
+
 *,
 *::after,
 *::before {
-   box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #111;
+  background: repeating-linear-gradient(
+      45deg,
+      #2b2b2b 0%,
+      #2b2b2b 10%,
+      #222222 0%,
+      #222222 50%
+    )
+    0 / 15px 15px;
+  font-family: $font;
+}
+
+// Utility
+.u-center {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  width: 35em;
+}
+
+.page {
+  &__title {
+    animation: titleAnim 10s infinite;
+    background: linear-gradient(
+      to right,
+      $giphyBlue,
+      $giphyGreen,
+      $giphyOrange,
+      $giphyPurple,
+      $giphyYellow
+    );
+    background-clip: text;
+    background-size: 500% 500%;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.75rem;
+    letter-spacing: 0.025em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+  }
+
+  &__form {
+    border-radius: 5em;
+    display: flex;
+    margin-bottom: 1em;
+    width: 100%;
+
+    &-input {
+      border: none;
+      background: #fff;
+      font-family: $fontSecondary;
+      font-size: 0.95rem;
+      padding: 0.785em 0.345em;
+    }
+
+    &-query {
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      color: #666;
+      flex-basis: 90%;
+      padding-left: 1.5em;
+
+      &:focus {
+        color: #111;
+      }
+    }
+
+    &-submit {
+      color: #999;
+      cursor: pointer;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      flex-basis: 10%;
+      transition: all 300ms ease;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 0.5em;
+    display: block;
+    width: 100%;
+  }
+}
+
+.credit {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  &__text {
+    color: rgba(255, 255, 255, 0.459);
+    font-family: $fontSecondary;
+    padding: 0 0.5em;
+
+    a {
+      color: inherit;
+      position: relative;
+      text-decoration: none;
+      transition: all 300ms ease;
+
+      &::after {
+        border: 1px solid #fff;
+        bottom: -0.25em;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: all 300ms ease;
+        width: 100%;
+      }
+
+      &:hover {
+        color: #fff;
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+@keyframes titleAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
