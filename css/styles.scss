@@ -117,13 +117,14 @@ body {
   text-align: center;
   width: 100%;
   z-index: 1000;
+  
   &__text {
-    color: rgba(255, 255, 255, 0.459);
+    color: rgba(255, 255, 255, 0.164);
     font-family: $fontSecondary;
     padding: 0 0.5em;
 
     a {
-      color: inherit;
+      color: rgba(255, 255, 255, 0.521);
       position: relative;
       text-decoration: none;
       transition: all 300ms ease;
