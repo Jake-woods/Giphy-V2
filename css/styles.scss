@@ -41,6 +41,7 @@ body {
   width: 35em;
 }
 
+// Main
 .page {
   &__title {
     animation: titleAnim 10s infinite;
@@ -56,11 +57,10 @@ body {
     background-size: 500% 500%;
     -webkit-text-fill-color: transparent;
     font-size: 2.75rem;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.125em;
     margin-bottom: 0.5em;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.125em;
   }
 
   &__form {
@@ -117,7 +117,7 @@ body {
   text-align: center;
   width: 100%;
   z-index: 1000;
-  
+
   &__text {
     color: rgba(255, 255, 255, 0.164);
     font-family: $fontSecondary;
@@ -144,6 +144,7 @@ body {
 
       &:hover {
         color: #fff;
+
         &::after {
           transform: scale(1);
         }
