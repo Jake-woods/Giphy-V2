@@ -98,6 +98,7 @@ body {
 .page__image {
   border-radius: 0.5em;
   display: block;
+  height: 20em;
   width: 100%;
 }
 
