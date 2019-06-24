@@ -247,3 +247,14 @@ body {
     background-position: 0% 50%;
   }
 }
+
+@media (max-width: 40em) {
+  .u-center {
+    max-width: 20em;
+  }
+  .page {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}
