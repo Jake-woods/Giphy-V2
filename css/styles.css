@@ -40,8 +40,8 @@ body {
           animation: titleAnim 10s infinite;
   background: -webkit-gradient(linear, left top, right top, from(#00ccff), color-stop(#00ff99), color-stop(#ff6666), color-stop(#9933ff), to(#fff35c));
   background: linear-gradient(to right, #00ccff, #00ff99, #ff6666, #9933ff, #fff35c);
-  background-clip: text;
-  background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-background-size: 500% 500%;
   -webkit-text-fill-color: transparent;
   font-size: 2.75rem;
   letter-spacing: 0.125em;
