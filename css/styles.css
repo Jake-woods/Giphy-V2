@@ -266,6 +266,11 @@ body {
     max-width: 20em;
   }
   .page__title {
+    background: none;
+    -webkit-background-clip: none;
+    -webkit-background-size: 0;
+    -webkit-text-fill-color: #fff;
+    color: #fff;
     font-size: 1.5rem;
   }
 }
